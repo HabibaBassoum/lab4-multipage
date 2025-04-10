@@ -1,0 +1,354 @@
+/* General Page Styling */
+body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+nav {
+ background: #333;
+ color: white;
+ padding: 10px 0;
+ text-align: center;
+}
+
+nav ul {
+ list-style: none;
+ padding: 0;
+}
+
+nav ul li {
+ display: inline;
+ margin: 0 15px;
+}
+
+nav ul li a {
+ color: white;
+ text-decoration: none;
+ font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+ position: relative;
+ text-align: center;
+ background: url('images/hero-bg.jpg') no-repeat center center/cover;
+ color: white;
+ padding: 60px 20px;
+}
+.hero::before {
+ content: "";
+ position: absolute;
+ top: 0; left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.7); 
+ z-index: 0;
+}
+.hero h1,
+.hero p {
+ position: relative;
+ z-index: 1;
+ color: white; 
+}
+.hero h1 {
+ font-size: 2.5em;
+ margin-bottom: 10px;
+ color: black; 
+}
+
+.hero p {
+ font-size: 1.2em;
+}  
+
+/* Main Flexbox Container */
+.flex-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+ max-width: 1200px;
+ margin: 20px auto;
+ padding: 20px;
+ gap: 20px;
+}
+
+/* Intro Section */
+.intro {
+ flex: 2;
+ background: white;
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+ color: #333;
+}
+
+.intro p {
+ color: #666;
+ font-size: 16px;
+}
+
+/* Sidebar Section */
+.sidebar {
+ flex: 1;
+ background: #007bff;
+ color: white;
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+ text-align: center;
+}
+
+.sidebar ul {
+ list-style: none;
+ padding: 0;
+}
+
+.sidebar ul li {
+ padding: 10px 0;
+ font-size: 16px;
+}
+
+/* Services Page Grid Layout */
+.grid-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 20px;
+ padding: 20px;
+ max-width: 1200px;
+ margin: auto;
+}
+
+.service-card {
+ background: white;
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ text-align: center;
+ transition: transform 0.3s;
+}
+
+.service-card img {
+ max-width: 100%;
+ height: auto;
+ border-radius: 5px;
+}
+
+.service-card:hover {
+ transform: scale(1.05);
+}
+
+/* Contact Page Form Styling */
+.contact-container {
+ max-width: 600px;
+ margin: 40px auto;
+ padding: 20px;
+ background: white;
+ border-radius: 10px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+ text-align: center;
+ color: #333;
+}
+
+.contact-form {
+ display: flex;
+ flex-direction: column;
+}
+
+.contact-form label {
+ font-weight: bold;
+ margin-top: 10px;
+ color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+ width: 100%;
+ padding: 10px;
+ margin-top: 5px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ font-size: 16px;
+}
+
+.contact-form textarea {
+ resize: vertical;
+ height: 120px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+ border-color: #007bff;
+ outline: none;
+ box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-form button {
+ margin-top: 15px;
+ padding: 10px;
+ background: #007bff;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ font-size: 18px;
+ cursor: pointer;
+ transition: background 0.3s;
+}
+
+.contact-form button:hover {
+ background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+ .flex-container {
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .intro, .sidebar {
+   width: 100%;
+ }
+
+ .sidebar {
+   text-align: center;
+ }
+}
+
+@media (max-width: 768px) {
+ .hero {
+   padding: 40px 20px;
+ }
+
+ .hero h1 {
+   font-size: 2em;
+ }
+
+ .hero p {
+   font-size: 1em;
+ }
+
+ .flex-container {
+   padding: 10px;
+ }
+
+ .intro, .sidebar {
+   padding: 15px;
+ }
+
+ .grid-container {
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ }
+}
+
+@media (max-width: 480px) {
+ .hero {
+   padding: 30px 10px;
+ }
+
+ .hero h1 {
+   font-size: 1.8em;
+ }
+
+ .hero p {
+   font-size: 0.9em;
+ }
+
+ nav ul li {
+   display: block;
+   margin: 10px 0;
+ }
+
+ .grid-container {
+   grid-template-columns: 1fr;
+ }
+}
+/* Dark Theme */
+.dark-theme {
+ background-color: #333;
+ color: white;
+}
+
+/* Hero Section - Dark Theme */
+.dark-theme .hero {
+ background: url('images/hero-bg-dark.jpg') no-repeat center center/cover;
+}
+
+.dark-theme .hero h1,
+.dark-theme .hero p {
+ color: white;
+}
+
+/* Sidebar Section - Dark Theme */
+.dark-theme .sidebar {
+ background: #444;
+ color: white;
+}
+
+/* Contact Form - Dark Theme */
+.dark-theme .contact-container {
+ background-color: #444;
+ color: white;
+}
+
+.dark-theme .contact-form input,
+.dark-theme .contact-form textarea {
+ background-color: #555;
+ border-color: #777;
+ color: white;
+}
+
+.dark-theme .contact-form button {
+ background-color: #0062cc;
+}
+
+.dark-theme .contact-form button:hover {
+ background-color: #004085;
+}
+
+/* Navigation Bar - Dark Theme */
+.dark-theme nav {
+ background-color: #222;
+}
+
+.dark-theme nav ul li a {
+ color: white;
+}
+
+/* General Body Background for Dark Theme */
+.dark-theme body {
+ background-color: #222;
+}
+.answer {
+ display: none;
+}
+
+.answer.visible {
+ display: block;
+}
+#backToTop {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #007bff;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+display: none; /* Hidden by default */
+}
+
+#backToTop:hover {
+background-color: #0056b3;
+}

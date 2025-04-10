@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Welcome to Lab 3</h1>
+    <p>This lab explores CSS3 styling, responsive layouts using Flexbox and Grid, and modern web design techniques.</p>
+  </header>
+
+  <!-- Flexbox Layout -->
+  <main class="flex-container">
+    <section class="intro">
+      <h2>About Us</h2>
+      <p>This webpage helps with understanding in CSS3 styling, Flexbox and Grid for responsive layouts, and how to structure multi-page websites effectively.</p>
+      <a href="services.html" class="btn">Explore Services</a>
+    </section>
+
+    <aside class="sidebar">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✔ CSS3 Styling</li>
+        <li>✔ Responsive Layouts</li>
+        <li>✔ UX/UI Best Practices</li>
+        <li>✔ Performance Optimization</li>
+      </ul>
+    </aside>
+  </main>
+
+  <div class="faq-item">
+    <h3 class="question">What is this website about?</h3>
+    <p class="answer">This is a demo project for learning web development.</p>
+</div>
+
+  <!-- Fetch API Integration -->
+  <section style="text-align:center; padding: 20px;">
+    <h2>Team Members</h2>
+    <ul id="userList"></ul>
+    <button id="loadUsersBtn">Load Users</button>
+  </section>
+
+  <script src="script.js" defer></script>
+  <button id="themeToggle">Switch Theme</button>
+  <button id="backToTop">Back to Top</button>
+</body>
+</html>
